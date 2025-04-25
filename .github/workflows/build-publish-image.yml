@@ -50,3 +50,4 @@ jobs:
         context: .
         push: true
         tags: ghcr.io/feaworkspace/oct-server:${{ startsWith(github.ref, 'refs/tags/') && github.ref_name || format('{0}-{1}', env.GITHUB_REF_NAME_SLUG, env.SHORT_SHA) }}
+        platforms: linux/amd64,linux/arm64
